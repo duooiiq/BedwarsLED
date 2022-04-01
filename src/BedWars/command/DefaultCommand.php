@@ -57,7 +57,7 @@ class DefaultCommand extends PluginCommand
 			switch (strtolower($args[0])) {
 				case "list";
 					$sender->sendMessage(TextFormat::BOLD . TextFormat::DARK_RED . "Arena List");
-					foreach ($this->getPlugin()->game as $game) {
+					foreach ($this->getPlugin()->Game as $game) {
 						$sender->sendMessage(TextFormat::GRAY . "- " . TextFormat::GREEN . $game->getName() . " [" . count($game->players) . "/" . $game->getMaxPlayers() . "]");
 					}
 					break;
