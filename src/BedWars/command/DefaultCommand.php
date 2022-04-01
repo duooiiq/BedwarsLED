@@ -73,7 +73,7 @@ class DefaultCommand extends PluginCommand
 					}
 
 					$gameName = $args[1];
-					if (array_key_exists($gameName, $this->getPlugin()->game)) {
+					if (array_key_exists($gameName, $this->getPlugin()->Game)) {
 						$sender->sendMessage(BedWars::PREFIX . TextFormat::YELLOW . "Game called " . $gameName . " already exists!");
 						return;
 					}
@@ -144,13 +144,13 @@ class DefaultCommand extends PluginCommand
 					}
 
 					$gameName = $args[1];
-					if (!in_array($gameName, array_keys($this->getPlugin()->game))) {
+					if (!in_array($gameName, array_keys($this->getPlugin()->Game))) {
 						$sender->sendMessage(BedWars::PREFIX . TextFormat::YELLOW . "Game called " . $gameName . " doesn't exist!");
 						return;
 					}
 
 					//close the arena if it's running
-					$gameObject = $this->getPlugin()->game[$gameName];
+					$gameObject = $this->getPlugin()->Game[$gameName];
 					if (!$gameObject instanceof Game) {
 						return; //wtf ??
 					}
