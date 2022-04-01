@@ -1,7 +1,4 @@
-
-<?php /** @noinspection PhpPossiblePolymorphicInvocationInspection */
-
-
+<?php
 namespace BedWars\game;
 
 use BedWars\{BedWars, utils\Scoreboard};
