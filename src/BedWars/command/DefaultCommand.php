@@ -1,7 +1,4 @@
-
 <?php
-
-
 namespace BedWars\command;
 
 
